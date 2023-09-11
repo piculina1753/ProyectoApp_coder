@@ -16,18 +16,19 @@ def curso(req, nombre, camada):
 
 def lista_cursos(req):
     lista = Curso.objects.all()
-    return render(req, "lista_curso.html", {"lista_cursos": lista})
+    return render(req, "lista_cursos.html", {"lista_cursos": lista})
 
-# def probando_template(request):
-# #     miHtml = open(r"C:\Users\Nadia\Documents\Curso python\proyectocoder\AppCoder\templates\lista_cursos.html")
-# #     plantilla = Template(miHtml.read())
-# #     miHtml.close()
-    
-# #     miContexto = Context({"my_name": "Nadia", "notas": [5,1,8,9,2]})
-    
-# #     documento = plantilla.render(miContexto)
-# #     return HttpResponse(documento)
+def inicio(req):
+    return render(req,"inicio.html")
 
-#  plantilla = loader.get_template ("templates1.html")
-#  documento = plantilla.render({"my_name": "Nadia", "notas": [5,1,8,9,2,7]})
-#  return HttpResponse(documento)
+def cursos(req):
+    return render(req,"cursos.html")
+
+def profesores(req):
+   return render(req,"profesores.html")
+
+def estudiantes(req):
+  return render(req,"estudiantes.html")
+
+def entregables(req):
+    return render(req,"entregables.html")
